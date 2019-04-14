@@ -53,8 +53,7 @@ NTSTATUS SmbDoorRegisterSrvNet(VOID)
 		if (!NT_SUCCESS(status = Routines.SrvNetRegisterClient(&ServerRegistration, &SrvNetHandle)))
 			break;
 
-		if (!NT_SUCCESS(status = Routines.SrvNetStartClient(SrvNetHandle)))
-			break;
+		Routines.SrvNetStartClient(SrvNetHandle);
 
 	} while (0);
 
@@ -69,5 +68,6 @@ VOID SmbDoorDeregisterSrvNet(VOID)
 	{
 		Routines.SrvNetStopClient(SrvNetHandle);
 		Routines.SrvNetDeregisterClient(SrvNetHandle);
+		SrvNetHandle = NULL;
 	}
 }
