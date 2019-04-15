@@ -7,5 +7,5 @@ The proof-of-concept smbdoor.sys driver is a silent remote backdoor that does no
 Of course, it comes with practical limitations that make it mostly an academic exploration, but I thought it might be interesting to share, and is possibly something EDR products should monitor.
 
 ### Detection: 
-https://twitter.com/zerosum0x0/status/1117701672237535233
-https://twitter.com/msuiche/status/1117716796658864128
+- https://twitter.com/zerosum0x0/status/1117701672237535233
+- https://twitter.com/msuiche/status/1117716796658864128
